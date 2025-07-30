@@ -21,6 +21,7 @@ body {
     background-color: var(--color-background);
     font-size: 16px;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
@@ -30,6 +31,8 @@ a {
 
 ul {
     list-style: none;
+    margin-bottom: 70px;
+    
 }
 
 img {
@@ -49,15 +52,28 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 40px var(--spacing-medium);
+
 }
 
 .logo {
-    font-family: var(--font-primary);
-    font-weight: 700;
-    font-size: 1.2rem;
+    font-family: var(--font-secondary);
+    font-weight: lighter;
+    font-size: 29px;
     letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
     line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    outline: 0;
     z-index: 10;
+    margin-bottom: var(--spacing-large);
+    color: rgb(47, 46, 46);
+    width: 119px;
+    height: 87px;
+    border: 3px solid black;
+    border-radius: 0;
+    display: flex;
 }
 
 .main-nav ul {
@@ -66,10 +82,12 @@ img {
 }
 
 .main-nav a {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 0.5px;
     transition: color 0.3s ease;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
 }
 
 .main-nav a:hover {
@@ -91,7 +109,7 @@ img {
 }
 
 .hero-top {
-    padding: 0 var(--spacing-medium);
+    padding: 0 var(--spacing-medium);;
 }
 
 .hero-full {
@@ -105,53 +123,98 @@ img {
 
 .featured-projects h2 {
     font-family: var(--font-secondary);
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 300;
     letter-spacing: 2px;
-    color: #999;
+    color: black;
     margin-bottom: var(--spacing-large);
 }
 
 .project {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 60px;
     margin-bottom: var(--spacing-large);
+}
+
+.project p{
+    align-self: flex-start;
 }
 
 .project.reverse {
     grid-template-columns: 0.6fr 1.4fr;
 }
 
-.project.reverse .project-info {
-    grid-column: 2;
-    grid-row: 1;
+.project.reverse .project-title {
     text-align: right;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.project.reverse p {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+    width: 300px;
 }
 
 .project.reverse .project-image {
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 1;
+    width: 450px;
 }
 
 .project-title {
     font-family: var(--font-primary);
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: 400;
     line-height: 0.9;
     color: var(--color-heading);
-    margin-bottom: 20px;
+    margin-bottom: 57px;
 }
 
 .project-info p {
     font-size: 0.9rem;
     font-weight: 300;
     max-width: 350px;
+    
+}
+
+.project-mevers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 60px;
+    margin-bottom: var(--spacing-large);
 }
 
 .project.reverse .project-info p {
     margin-left: auto;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #333; 
+  font-family: var(--font-secondary, 'Poppins', sans-serif);
+  font-size: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  transition: color 0.2s ease;
+  font-weight: 300;
+  align-items: center;
+  margin-right: 10px;
+
+  &:hover {
+    color: #000; 
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .recent-news {
@@ -160,11 +223,11 @@ img {
 
 .recent-news h2 {
     font-family: var(--font-secondary);
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 10;
     letter-spacing: 2px;
-    color: #999;
-    margin-bottom: var(--spacing-medium);
+    color: black;
+    margin-bottom: var(--spacing-large);
 }
 
 .news-grid {
@@ -179,15 +242,18 @@ img {
 }
 
 .news-number {
-    font-family: var(--font-primary);
-    font-size: 3rem;
+    background: transparent;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 47px;
     font-weight: 700;
-    color: #e0e0e0;
+    color: black;
+    vertical-align: baseline;
 }
 
 .news-date {
     font-size: 0.8rem;
-    color: #999;
+    color: black;
     margin: 10px 0;
 }
 
@@ -196,6 +262,116 @@ img {
     font-size: 1.1rem;
     font-weight: 400;
     line-height: 1.4;
+}
+.news-button {
+    background: none;
+    border: none;
+    color: #333;
+    font-family: var(--font-secondary, "poppins", sans-serif);
+    font-size: 16px;
+    text-decoration: underline;
+    margin: 0;
+    padding: 0;
+    transition: color 0.2s ease;
+    font-weight: 100;
+    
+}
+
+.form-heading {
+    text-align: left;
+    margin: 30px;
+
+    h1 {
+        font-size: 70px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #111;
+    }
+}
+
+.contact-form {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: var(--font-primary, 'Poppins', sans-serif); 
+  font-style: italic;
+
+  .form-row {
+    display: flex;
+    gap: 40px;
+
+    .form-group {
+      flex: 1;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 40px;
+
+    label {
+      display: block;
+      font-size: 16px;
+      color: var(--color-text, #333);
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid var(--color-text, #000);
+      background: transparent;
+      padding: 8px 0;
+      font-size: 16px;
+      outline: none;
+      resize: none;
+
+      &:focus {
+        border-bottom-color: #555;
+      }
+    }
+  }
+
+  .submit-group {
+    text-align: center;
+
+    button {
+      font-size: 16px;
+      font-family: inherit;
+      border: none;
+      background: none;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--color-text, #000);
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        border-color: #555;
+        color: #555;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+}
+
+.map {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  
+  iframe{
+    width: 1513px;
+    height: 400px;
+    border: none;
+    display: block;
+  }
 }
 
 .site-footer {
