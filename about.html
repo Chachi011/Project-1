@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
+  <title>About</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,8 @@
 <body>
 
    <header class="main-header">
+
+    <div class="fullscreen-menu" id="fullscreenMenu"> 
         <div class="logo"><a href="index.html">ARCHI<br>TECTS</a></div>
         <nav class="main-nav">
             <ul>
@@ -27,47 +29,8 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+    </div>
     </header>
-
-    <form class="contact-form">
-  <div class="form-heading">
-    <h1>BE IN<br>TOUCH</h1>
-  </div>
-  <div class="form-row">
-    <div class="form-group">
-      <label for="first">First Name *</label>
-      <input type="text" id="first" required>
-    </div>
-    <div class="form-group">
-      <label for="last">Last Name *</label>
-      <input type="text" id="last" required>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label for="email">Email *</label>
-    <input type="email" id="email" required>
-  </div>
-
-  <div class="form-group">
-    <label for="subject">Subject</label>
-    <input type="text" id="subject">
-  </div>
-
-  <div class="form-group">
-    <label for="message">Message</label>
-    <textarea id="message" rows="4"></textarea>
-  </div>
-
-  <div class="submit-group">
-    <button type="submit">Submit</button>
-  </div>
-</form>
-
-   
-    <section class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11398.93131618873!2d44.782252007149154!3d41.72095410134377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404472cdf8e6b329%3A0x316d4c4991b44fc3!2z4YOR4YOd4YOg4YOY4YOhIOGDnuGDkOGDmOGDreGDkOGDq-GDmOGDoSDhg5Thg6Dhg53hg5Xhg5zhg6Phg5rhg5gg4YOh4YOi4YOQ4YOT4YOY4YOd4YOc4YOY!5e1!3m2!1ska!2sge!4v1753895762295!5m2!1ska!2sge" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
 
     <footer class="site-footer">
         <div class="footer-container container">
@@ -86,16 +49,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        const burger = document.getElementById('burger');
-        const nav = document.querySelector('.main-nav');
-
-        burger.addEventListener('click', () => {
-            console.log('clicked');
-            nav.classList.toggle('active');
-        });
-    </script>
   
 </body>
 </html>
